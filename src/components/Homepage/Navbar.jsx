@@ -4,7 +4,7 @@ import { IoPerson } from "react-icons/io5";
 
 export default function Navbar() {
   return (
-    <div className="bg-bgMain shadow-md flex justify-between items-center px-10 py-4 fixed w-full">
+    <div className="bg-bgMain shadow-md flex justify-between items-center px-10 py-4 absolute w-full">
       <div >
         <ul className="flex gap-x-4 text-gray-600">
           <li>
