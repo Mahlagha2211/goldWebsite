@@ -29,7 +29,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <img src="../../../public/image/logo.png " className="w-12" alt="" />
+      <img src="/image/logo.png" className="w-12" alt="" />
       <div className="flex items-center gap-3 text-gray-600">
         <IoPerson className="cursor-pointer" />
         <IoSearchSharp className="cursor-pointer"  />

@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <div className="bg-[#E4D1B3] h-[500px] grid grid-cols-2 items-end p-10">
+    <div className="bg-[#E4D1B3] h-[500px] grid grid-cols-2 items-end p-12 text-[#885c30]">
       <div className="flex flex-col items-baseline gap-y-3">
         <p>Discover the Brilliance of Luctury Jewellry</p>
         <p className="text-6xl">Elevate Your Style</p>
@@ -15,12 +15,12 @@ export default function Header() {
       </div>
       <div className="flex justify-end relative ">
         <img
-          src="../../../public/image/headerImage1.png"
+          src="./image/headerImage1.png"
           className="w-42 h-54 rounded-t-full outline-2 outline-bgMain self-end absolute right-38"
           alt=""
         />
         <img
-          src="../../../public/image/headerImage.png"
+          src="./image/headerImage.png"
           className="w-50 h-70 rounded-t-full outline-2 outline-bgMain"
           alt=""
         />
