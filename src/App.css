@@ -8,5 +8,5 @@
   @apply bg-center bg-cover  h-72 w-28 rounded-2xl;
 }
 .bgCategory {
-  @apply p-1 rounded-2xl border border-white bg-linear-to-t from-white to-[rgba(255,255,255,0.1)] text-4xl font-light text-white relative ;
+  @apply p-1 rounded-2xl border border-white bg-linear-to-t from-white to-[rgba(255,255,255,0.1)] text-4xl font-light text-white relative  ;
 }
