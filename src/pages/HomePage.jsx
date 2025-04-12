@@ -5,6 +5,7 @@ import LastArrival from "../components/Homepage/LastArrival";
 import Diamond from "../components/Homepage/Diamond";
 import Opinion from "../components/Homepage/opinion";
 import Footer from "../components/Homepage/Footer";
+
 export default function HomePage() {
   return (
     <div>

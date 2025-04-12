@@ -1,0 +1,234 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Necklace",
+      "products": [
+        {
+          "id": 101,
+          "name": "Heart-Shaped Gold Necklace",
+          "image": "/image/neck1.png"
+        },
+        {
+          "id": 102,
+          "name": " Gold Necklace with Gemstone",
+          "image": "/image/neck2.png"
+        },
+        {
+          "id": 103,
+          "name": "Nameplate Gold Necklace",
+          "image": "/image/neck3.png"
+        },
+        {
+          "id": 104,
+          "name": "Twisted Rope Gold Necklace",
+          "image": "/image/neck4.png"
+        },
+        {
+          "id": 105,
+          "name": "Butterfly Gold Pendant Necklace",
+          "image": "/image/neck5.png"
+        },
+        {
+          "id": 106,
+          "name": "Gold Choker with Gemstone",
+          "image": "/image/neck6.png"
+        },
+        {
+          "id": 107,
+          "name": "Minimalist Gold Chain Necklace",
+          "image": "/image/neck7.png"
+        },
+        {
+          "id": 108,
+          "name": "Gold Bar Pendant Necklace",
+          "image": "/image/arrival1.png"
+        },
+        {
+          "id": 109,
+          "name": "Gold Locket Necklace",
+          "image": "/image/arrival2.png"
+        },
+        {
+          "id": 110,
+          "name": "Infinity Symbol Gold Necklace",
+          "image": "/image/arrival3.png"
+        },
+        {
+          "id": 111,
+          "name": "Gold Bar Pendant Necklace",
+          "image": "/image/arrival4.png"
+        },
+        {
+          "id": 112,
+          "name": "Heart-Shaped Gold Necklace",
+          "image": "/image/arrival5.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ring",
+      "products": [
+        {
+          "id": 201,
+          "name": "Minimal Gold Stackable Ring",
+          "image": "/image/ring1.png"
+        },
+        {
+          "id": 202,
+          "name": "Gold Ring with Diamond Accent",
+          "image": "/image/ring2.png"
+        },
+        {
+          "id": 203,
+          "name": "Classic Gold Band Ring",
+          "image": "/image/ring3.png"
+        },
+        {
+          "id": 204,
+          "name": "Twisted Rope Gold Ring",
+          "image": "/image/ring4.webp"
+        },
+        {
+          "id": 205,
+          "name": "Gold Ring with Turquoise Stone",
+          "image": "/image/ring5.jpg"
+        },
+        {
+          "id": 206,
+          "name": "Gold Signet Ring",
+          "image": "/image/ring6.png"
+        },
+        {
+          "id": 207,
+          "name": "Vintage Floral Gold Ring",
+          "image": "/image/ring7.avif"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Erring",
+      "products": [
+        {
+          "id": 301,
+          "name": "Gold Hoop Earrings",
+          "image": "/image/errings1.webp"
+        },
+        {
+          "id": 302,
+          "name": "Gold Drop Earrings",
+          "image": "/image/errings2.jpg"
+        },
+        {
+          "id": 303,
+          "name": "Gold Stud Earrings",
+          "image": "/image/errings3.webp"
+        },
+        {
+          "id": 304,
+          "name": "Gold Huggie Earrings",
+          "image": "/image/errings4.jpg"
+        },
+        {
+          "id": 305,
+          "name": "Gold Teardrop Earrings",
+          "image": "/image/errings5.jpg"
+        },
+        {
+          "id": 306,
+          "name": "Geometric Gold Earrings",
+          "image": "/image/errings6.jpg"
+        },
+        {
+          "id": 307,
+          "name": "Gold Ear Cuff",
+          "image": "/image/errings7.webp"
+        },
+        {
+          "id": 308,
+          "name": "Butterfly Gold Earrings",
+          "image": "/image/errings8.webp"
+        },
+        {
+          "id": 309,
+          "name": "Gold Threader Earrings",
+          "image": "/image/errings9.webp"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "sets",
+      "products": [
+        {
+          "id": 401,
+          "name": "انگشتر طلا زنانه",
+          "image": "Royal Elegance Gold Set"
+        },
+        {
+          "id": 402,
+          "name": "Minimal Chic Jewelry Set",
+          "image": "/image/sets2.jpg"
+        },
+        {
+          "id": 403,
+          "name": "Classic Bridal Gold Set",
+          "image": "/image/sets3.jpg"
+        },
+        {
+          "id": 404,
+          "name": "Floral Design Gold Set",
+          "image": "/image/sets4.jpg"
+        },
+        {
+          "id": 405,
+          "name": "Luxury Gemstone Gold Set",
+          "image": "/image/sets5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "bracelet",
+      "products": [
+        {
+          "id": 501,
+          "name": "Gold Charm Bracelet",
+          "image": "/image/bracelet1.jpg"
+        },
+        {
+          "id": 502,
+          "name": "Gold Cuff Bracelet",
+          "image": "/image/bracelet2.webp"
+        },
+        {
+          "id": 503,
+          "name": "Gold Chain Bracelet",
+          "image": "/image/bracelet3.jpeg"
+        },
+        {
+          "id": 504,
+          "name": "Delicate Gold Bangle",
+          "image": "/image/bracelet4.jpg"
+        },
+        {
+          "id": 505,
+          "name": "Infinity Symbol Gold Bracelet",
+          "image": "/image/bracelet5.jpg"
+        },
+        {
+          "id": 506,
+          "name": "Gold Beaded Bracelet",
+          "image": "/image/bracelet6.avif"
+        },
+        {
+          "id": 507,
+          "name": "Personalized Name Gold Bracelet",
+          "image": "/image/bracelet7.jpg"
+        }
+      ]
+    }
+  ]
+}
