@@ -1,15 +1,18 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
 @theme {
   --color-bgMain: #f2e9db;
   --color-primaryColor: #c0914b;
   --color-primaryFont: #806132;
 }
 .category {
-  @apply bg-center bg-cover  h-72 w-28 rounded-2xl;
+  @apply bg-center h-72 min-[700px]:max-[900px]:w-20 w-28 max-[500px]:w-24 bg-cover rounded-2xl;
 }
 .bgCategory {
-  @apply p-1 rounded-2xl border border-white bg-linear-to-t from-white to-[rgba(255,255,255,0.1)] text-4xl font-light text-white relative;
+  @apply p-1    rounded-2xl border  border-white bg-linear-to-t from-white to-[rgba(255,255,255,0.1)] text-4xl font-light text-white relative;
 }
 .diamond {
-  @apply h-24  flex flex-col justify-between items-center text-[#C28978] cursor-pointer hover:scale-110
+  @apply h-24  flex flex-col justify-between items-center text-[#C28978] cursor-pointer hover:scale-110;
 }
