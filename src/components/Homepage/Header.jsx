@@ -21,12 +21,12 @@ export default function Header() {
         <div className="flex md:justify-end justify-center relative">
           <img
             src="./image/headerImage1.png"
-            className="min-[1040px]:w-42 min-[1040px]:h-54 w-32 h-44 rounded-t-full outline-2 outline-bgMain self-end max-md:relative max-md:left-5 md:absolute min-[1040px]:!right-38 md:right-30"
+            className="min-[1040px]:w-42 min-[1040px]:h-54 w-32 h-44 max-[450px]:h-36 max-[450px]:w-28 rounded-t-full outline-2 outline-bgMain self-end max-md:relative max-md:left-5 md:absolute min-[1040px]:!right-38 md:right-30"
             alt=""
           />
           <img
             src="./image/headerImage.png"
-            className="min-[1040px]:w-50 min-[1040px]:h-70 w-40 h-60 rounded-t-full outline-2 outline-bgMain"
+            className="min-[1040px]:w-50 min-[1040px]:h-70 w-40 h-60 max-[450px]:h-50 max-[450px]:w-36 rounded-t-full outline-2 outline-bgMain"
             alt=""
           />
         </div>

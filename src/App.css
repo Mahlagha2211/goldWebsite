@@ -14,5 +14,11 @@
   @apply p-1    rounded-2xl border  border-white bg-linear-to-t from-white to-[rgba(255,255,255,0.1)] text-4xl font-light text-white relative;
 }
 .diamond {
-  @apply h-24  flex flex-col justify-between items-center text-[#C28978] cursor-pointer hover:scale-110;
+  @apply h-24 max-[550px]:h-20  flex flex-col justify-between items-center text-[#C28978] cursor-pointer hover:scale-110;
+}
+.diamond img {
+  @apply max-[550px]:h-10;
+}
+.diamond p{
+  @apply max-[550px]:text-[12px] max-[550px]:font-bold;
 }

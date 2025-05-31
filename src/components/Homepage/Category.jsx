@@ -2,7 +2,7 @@ export default function Category() {
   return (
     <div className="bg-linear-to-b from-[#F2E9DB] to-[#DFC8A5] flex flex-col items-center justify-center gap-y-10 py-16">
       <div className="text-center space-y-4">
-        <p className="text-4xl text-primaryFont max-[900px]:text-3xl max-[500px]:text-2xl">
+        <p className="text-4xl text-primaryFont max-[900px]:text-3xl max-[500px]:text-xl">
           Shop By Category
         </p>
         <p className="text-[#C0914B]">Indulge in what we offer</p>

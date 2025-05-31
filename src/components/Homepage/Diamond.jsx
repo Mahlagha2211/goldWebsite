@@ -1,8 +1,8 @@
 export default function Diamond() {
   return (
     <div className="bg-[#F2E9DB]  flex flex-col items-center gap-y-16 py-12 border border-white shadow">
-      <p className="text-primaryFont text-4xl">Explore Diamonds</p>
-      <div className="flex gap-x-12">
+      <p className="text-primaryFont text-4xl max-[900px]:text-3xl max-[500px]:text-xl">Explore Diamonds</p>
+      <div className="grid grid-cols-8 max-[850px]:grid-cols-4 max-[370px]:grid-cols-2 gap-x-5 gap-y-10">
         <div className="diamond">
           <img src="./image/round.png"  alt="" />
           <p>ROUND</p>

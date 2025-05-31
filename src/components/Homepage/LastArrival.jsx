@@ -56,7 +56,7 @@ export default function LastArrival() {
   return (
     <div className="bg-linear-to-b from-[#F2E9DB] via-[#E4D1B3] to-[#DFC8A5] flex flex-col items-center gap-y-10 py-16 ">
       <div className="text-center space-y-4">
-        <p className="text-4xl text-primaryFont max-[900px]:text-3xl max-[500px]:text-2xl">Last Arrivals</p>
+        <p className="text-4xl text-primaryFont max-[900px]:text-3xl max-[500px]:text-xl">Last Arrivals</p>
         <p className="text-[#C0914B]">Indulge in what we offer</p>
       </div>
       <div className="w-3/4  relative ">
