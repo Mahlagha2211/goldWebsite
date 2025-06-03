@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": 1,
-      "name": "Necklace",
+      "name": "necklaces",
       "products": [
         {
           "id": 101,
@@ -42,33 +42,33 @@
         {
           "id": 108,
           "name": "Gold Bar Pendant Necklace",
-          "image": "/image/arrival1.png"
+          "image": "/image/arrival12.png"
         },
         {
           "id": 109,
           "name": "Gold Locket Necklace",
-          "image": "/image/arrival2.png"
+          "image": "/image/arrival22.png"
         },
         {
           "id": 110,
           "name": "Infinity Symbol Gold Necklace",
-          "image": "/image/arrival3.png"
+          "image": "/image/arrival32.png"
         },
         {
           "id": 111,
           "name": "Gold Bar Pendant Necklace",
-          "image": "/image/arrival4.png"
+          "image": "/image/arrival42.png"
         },
         {
           "id": 112,
           "name": "Heart-Shaped Gold Necklace",
-          "image": "/image/arrival5.png"
+          "image": "/image/arrival52.png"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Ring",
+      "name": "rings",
       "products": [
         {
           "id": 201,
@@ -109,7 +109,7 @@
     },
     {
       "id": 3,
-      "name": "Erring",
+      "name": "earrings",
       "products": [
         {
           "id": 301,
@@ -134,7 +134,7 @@
         {
           "id": 305,
           "name": "Gold Teardrop Earrings",
-          "image": "/image/errings5.jpg"
+          "image": "/image/errings5.webp"
         },
         {
           "id": 306,
@@ -164,8 +164,8 @@
       "products": [
         {
           "id": 401,
-          "name": "انگشتر طلا زنانه",
-          "image": "Royal Elegance Gold Set"
+          "name": "Jewelry Set",
+          "image": "/image/sets1.webp"
         },
         {
           "id": 402,
@@ -191,7 +191,7 @@
     },
     {
       "id": 5,
-      "name": "bracelet",
+      "name": "bracelets",
       "products": [
         {
           "id": 501,

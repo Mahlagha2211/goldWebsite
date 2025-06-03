@@ -22,7 +22,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
   return (
     <>
       <ThemeProvider theme={customTheme}>
-        <Drawer open={isOpen} onClose={() => setIsOpen(false)} position="right" className="space-y-6">
+        <Drawer open={isOpen} onClose={() => setIsOpen(false)} position="right" className="transition-all duration-700 ease-in-out space-y-6">
           <div className="flex justify-between items-center ">
             <h3 className="text-xl ">Ma jewellery</h3>
             <IoMdClose

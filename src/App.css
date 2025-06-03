@@ -23,5 +23,5 @@
   @apply max-[550px]:text-[12px] max-[550px]:font-bold;
 }
 .AllCategories {
-  @apply bg-white rounded-lg py-10 shadow-[0_0_7px_gray] text-shadow-[1px_1px_0px_gray] text-center text-[20px] text-[#535252];
+  @apply bg-white rounded-lg min-[900px]:py-10 py-5 shadow-[0_0_7px_gray] text-shadow-[1px_1px_0px_gray] text-center sm:text-[20px] text-[18px] text-[#535252];
 }

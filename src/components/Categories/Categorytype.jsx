@@ -1,9 +1,64 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
+import { CiHeart } from "react-icons/ci";
+import { BeatLoader } from "react-spinners";
 
 export default function Categorytype() {
   const { category } = useParams();
+  const fetchedData = async () => {
+    const response = await axios.get("/data/db.json");
+    return response.data.categories.find((item) => item.name == category);
+  };
+  const { data, isLoading } = useQuery({
+    queryKey: ["item"],
+    queryFn: fetchedData,
+  });
 
-  return <div></div>;
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center h-[500px]">
+        <BeatLoader loading={isLoading} size={15} color="#C28978" />
+      </div>
+    );
+  return (
+    <div className=" pt-[130px] md:px-15 px-10 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5]">
+      <p className="text-center min-[580px]:text-3xl min-[400px]:text-2xl text-xl text-[#604825]">
+        {data.name}
+      </p>
+      <p className="text-center text-primaryColor mt-4 min-[400px]:text-[13px] text-[12px]">
+        Find your new everyday favorite with our collection of {data.name} for
+        men and women
+      </p>
+      <hr className="text-primaryColor mt-8" />
+      <div className="grid lg:grid-cols-3 min-[580px]:grid-cols-2 grid-cols-1 py-20  sm:gap-x-6 gap-x-3 gap-y-8 items-stretch">
+        {data.products.map((item) => (
+          <div key={item.id} className="flex flex-col h-full">
+            <div className="flex-1 rounded-2xl p-2 border border-white overflow-hidden bg-gradient-to-b from-[rgba(255,255,255,0.4)] via-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.4)]">
+              <div className="bg-white relative w-full h-full rounded-2xl overflow-hidden flex flex-col">
+                <CiHeart className="absolute right-3 top-3 text-[#C28978] w-7 h-7 hover:text-red-600" />
+                <img
+                  src={item.image}
+                  className="w-full min-[1100px]:h-72 min-[580px]:h-52 h-40"
+                />
+                <div className="py-2 sm:px-6 px-4 space-y-2 flex flex-col flex-1">
+                  <p className="text-[#C28978] font-bold max-[850px]:text-[13px]">
+                    {item.name}
+                  </p>
+                  <p className="text-justify min-[850px]:text-[14px] min-[400px]:text-[12px] text-[11px] flex-1">
+                    Lab-Grown Diamonds by KAY Emerald-Cut Halo Necklace 1/2 ct
+                    tw 10K White Gold 18"
+                  </p>
+                  <p className="text-[#B53A3A]">$1599.99</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-primaryColor cursor-pointer text-center w-full py-2 text-white rounded-2xl border border-white mt-3">
+              add to card
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
