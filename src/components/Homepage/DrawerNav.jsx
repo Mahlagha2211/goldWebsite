@@ -19,10 +19,22 @@ const customTheme = createTheme({
 });
 
 export default function DrawerNav({ isOpen, setIsOpen }) {
+  const handleClick = () => {
+    // اگه مسیر همونی بود که هست، فقط drawer رو ببند
+    if (location.pathname === to) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
       <ThemeProvider theme={customTheme}>
-        <Drawer open={isOpen} onClose={() => setIsOpen(false)} position="right" className="transition-all duration-700 ease-in-out space-y-6">
+        <Drawer
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+          position="right"
+          className="transition-all duration-700 ease-in-out space-y-6"
+        >
           <div className="flex justify-between items-center ">
             <h3 className="text-xl ">Ma jewellery</h3>
             <IoMdClose
@@ -31,7 +43,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
               onClick={() => setIsOpen(false)}
             />
           </div>
-          <hr/>
+          <hr />
 
           <DrawerItems>
             <Sidebar
@@ -40,10 +52,11 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
             >
               <div className="flex h-full flex-col justify-between py-2">
                 <div>
-                  <SidebarItems >
+                  <SidebarItems>
                     <SidebarItemGroup className="flex flex-col  ">
                       <NavLink
                         to="/"
+                        onClick={handleClick}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
@@ -74,6 +87,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                       </NavLink>
                       <NavLink
                         to="/products"
+                        onClick={handleClick}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
