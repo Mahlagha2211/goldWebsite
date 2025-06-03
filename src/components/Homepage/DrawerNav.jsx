@@ -19,13 +19,6 @@ const customTheme = createTheme({
 });
 
 export default function DrawerNav({ isOpen, setIsOpen }) {
-  const handleClick = () => {
-    // اگه مسیر همونی بود که هست، فقط drawer رو ببند
-    if (location.pathname === to) {
-      setIsOpen(false);
-    }
-  };
-
   return (
     <>
       <ThemeProvider theme={customTheme}>
@@ -56,7 +49,6 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                     <SidebarItemGroup className="flex flex-col  ">
                       <NavLink
                         to="/"
-                        onClick={handleClick}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
@@ -87,7 +79,6 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                       </NavLink>
                       <NavLink
                         to="/products"
-                        onClick={handleClick}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
