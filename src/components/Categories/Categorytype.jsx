@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import { CiHeart } from "react-icons/ci";
 import { BeatLoader } from "react-spinners";
 
@@ -11,7 +11,7 @@ export default function Categorytype() {
     return response.data.categories.find((item) => item.name == category);
   };
   const { data, isLoading } = useQuery({
-    queryKey: ["item"],
+    queryKey: ["items"],
     queryFn: fetchedData,
   });
 
@@ -35,7 +35,10 @@ export default function Categorytype() {
         {data.products.map((item) => (
           <div key={item.id} className="flex flex-col h-full">
             <div className="flex-1 rounded-2xl p-2 border border-white overflow-hidden bg-gradient-to-b from-[rgba(255,255,255,0.4)] via-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.4)]">
-              <div className="bg-white relative w-full h-full rounded-2xl overflow-hidden flex flex-col">
+              <NavLink
+                to={`/products/${category}/${item.id}`}
+                className="bg-white relative w-full h-full rounded-2xl overflow-hidden flex flex-col"
+              >
                 <CiHeart className="absolute right-3 top-3 text-[#C28978] w-7 h-7 hover:text-red-600" />
                 <img
                   src={item.image}
@@ -51,7 +54,7 @@ export default function Categorytype() {
                   </p>
                   <p className="text-[#B53A3A]">$1599.99</p>
                 </div>
-              </div>
+              </NavLink>
             </div>
             <div className="bg-primaryColor cursor-pointer text-center w-full py-2 text-white rounded-2xl border border-white mt-3">
               add to card

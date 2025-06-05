@@ -5,6 +5,7 @@ import Categorytype from "./components/Categories/Categorytype";
 
 import AllCategory from "./components/Categories/AllCategory";
 import Top from "./components/Top";
+import DetailItem from "./components/Categories/DetailItem";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/products" element={<Categories />}>
           <Route index element={<AllCategory />} />
           <Route path=":category" element={<Categorytype />} />
+          <Route path=":category/:id" element={<DetailItem />} />
         </Route>
       </Routes>
     </>

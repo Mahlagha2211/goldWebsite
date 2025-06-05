@@ -19,6 +19,7 @@ const customTheme = createTheme({
 });
 
 export default function DrawerNav({ isOpen, setIsOpen }) {
+  const closeDrawer = () => {};
   return (
     <>
       <ThemeProvider theme={customTheme}>
@@ -49,16 +50,32 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                     <SidebarItemGroup className="flex flex-col  ">
                       <NavLink
                         to="/"
+                        onClick={(e) => {
+                          if (location.pathname === "/") {
+                            e.preventDefault();
+                            setIsOpen(false);
+                          } else {
+                            setIsOpen(false);
+                          }
+                        }}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
                           }`
                         }
                       >
-                        JEWELLERY
+                        HOME
                       </NavLink>
                       <NavLink
                         to="/releases"
+                        onClick={(e) => {
+                          if (location.pathname === "/releases") {
+                            e.preventDefault();
+                            setIsOpen(false);
+                          } else {
+                            setIsOpen(false);
+                          }
+                        }}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
@@ -69,6 +86,14 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                       </NavLink>
                       <NavLink
                         to="/gifts"
+                        onClick={(e) => {
+                          if (location.pathname === "/gifts") {
+                            e.preventDefault();
+                            setIsOpen(false);
+                          } else {
+                            setIsOpen(false);
+                          }
+                        }}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""
@@ -79,6 +104,14 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                       </NavLink>
                       <NavLink
                         to="/products"
+                        onClick={(e) => {
+                          if (location.pathname === "/products") {
+                            e.preventDefault();
+                            setIsOpen(false);
+                          } else {
+                            setIsOpen(false);
+                          }
+                        }}
                         className={({ isActive }) =>
                           `hover:bg-[#E4D1B3]  p-2 rounded-[5px] ${
                             isActive ? "bg-[#D9B8A7]" : ""

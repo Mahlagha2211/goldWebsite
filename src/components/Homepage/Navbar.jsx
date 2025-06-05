@@ -21,7 +21,7 @@ export default function Navbar() {
                   } max-[992px]:text-[14px]`
                 }
               >
-                JEWELLERY
+               HOME
               </NavLink>
             </li>
             <li className="">
