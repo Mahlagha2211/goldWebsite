@@ -30,7 +30,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
           className="transition-all duration-700 ease-in-out space-y-6"
         >
           <div className="flex justify-between items-center ">
-            <h3 className="text-xl ">Ma jewellery</h3>
+            <h3 className="text-xl ">MA jewellery</h3>
             <IoMdClose
               className="cursor-pointer "
               size={25}
