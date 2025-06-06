@@ -47,6 +47,7 @@ export default function Footer() {
             <p className="font-bold max-[450px]:text-center">You can be one step ahead.</p>
             <p className="text-justify max-[450px]:text-center">Sign up to hear about our updates on the dot.</p>
             <input type="text" className="bg-white rounded-lg shadow-md  w-full py-1 px-3 focus:outline-none" placeholder="Your email address.." />
+            <input type="submit" value="submit" className="cursor-pointer shadow-[inset_0_0_4px_gray]  bg-white px-2 py-1 rounded-lg" />
           </div>
         </div>
       </div>
