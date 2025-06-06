@@ -41,11 +41,17 @@ const cartAbility = (state, { type, payload }) => {
 };
 export function ContextMenu({ children }) {
   const [cartShop, dispatch] = useReducer(cartAbility, []);
-  const [allPriceShop, setAllPriceShop] = useState();
+  const [allPriceShop, setAllPriceShop] = useState(0.0);
   useEffect(() => {
-    let money = 0;
-    cartShop.map((item) => (money += Number(item.totalPrice)));
-  
+    if (!cartShop || cartShop.length === 0) {
+      setAllPriceShop("0.00");
+      return;
+    }
+    const money = cartShop.reduce(
+      (acc, item) => acc + Number(item.totalPrice),
+      0
+    );
+
     setAllPriceShop(money.toFixed(2));
   }, [cartShop]);
 
