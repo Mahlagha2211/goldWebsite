@@ -5,21 +5,19 @@ import MenuContext from "../context/ContexMenu";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
-
 export default function DrawerShop({ shopOpen, setShopOpen }) {
   const { cartShop, dispatch, allPriceShop } = useContext(MenuContext);
-const customTheme = createTheme({
-  drawer: {
-    root: {
-      base: "!bg-bgMain text-[#666666]",
+  const customTheme = createTheme({
+    drawer: {
+      root: {
+        base: "!bg-bgMain text-[#666666]",
+      },
     },
-  },
-});
+  });
   return (
     <>
       <ThemeProvider theme={customTheme}>
         <Drawer
-        
           open={shopOpen}
           onClose={() => setShopOpen(false)}
           position="right"
@@ -33,7 +31,7 @@ const customTheme = createTheme({
               onClick={() => setShopOpen(false)}
             />
           </div>
-          <hr className="" />
+          <hr />
           <div className="space-y-5 relative">
             {cartShop.map((item) => (
               <div key={item.id} className="flex px-3 items-center gap-x-1">
@@ -67,12 +65,11 @@ const customTheme = createTheme({
                 </div>
               </div>
             ))}
-            {
-              <div className="fixed text-black w-full h-16 gap-x-2 shadow shadow-black bg-[#D9B8A7] bottom-0 flex items-center px-3 ">
-                <p className="text-[18px] ">totalPrice:</p>
-                <p className="font-bold">${allPriceShop}</p>
-              </div>
-            }
+          </div>
+
+          <div className="fixed bottom-0  w-full h-16 z-50 bg-[#D9B8A7] shadow shadow-black will-change-transform transform-gpu flex items-center px-3 gap-x-2 text-black">
+            <p className="text-[18px] ">totalPrice:</p>
+            <p className="font-bold">${allPriceShop} </p>
           </div>
         </Drawer>
       </ThemeProvider>
