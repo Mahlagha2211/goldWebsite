@@ -34,7 +34,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
           <hr />
           <div className="space-y-5 relative">
             {cartShop.map((item) => (
-              <div key={item.id} className="flex px-3 items-center gap-x-1">
+              <div key={item.id} className="flex px-3 items-center gap-x-1  ">
                 <IoMdClose
                   onClick={() => dispatch({ type: "delete", payload: item })}
                   className="cursor-pointer text-[15px]"
@@ -67,7 +67,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
             ))}
           </div>
 
-          <div className="fixed bottom-0  w-full h-16 z-50 bg-[#D9B8A7] shadow shadow-black will-change-transform transform-gpu flex items-center px-3 gap-x-2 text-black">
+          <div className="fixed bottom-0  w-full h-16 z-50 bg-[#D9B8A7] shadow shadow-black  flex items-center px-3 gap-x-2 text-black">
             <p className="text-[18px] ">totalPrice:</p>
             <p className="font-bold">${allPriceShop} </p>
           </div>

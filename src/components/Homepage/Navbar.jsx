@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import {  NavLink, useNavigate } from "react-router";
 import { FaShoppingBag } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
@@ -6,8 +6,10 @@ import { useState } from "react";
 import DrawerNav from "./DrawerNav";
 import DrawerShop from "./DrawerShop";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const [shopOpen, setShopOpen] = useState(false);
   return (
     <div className="bg-bgMain shadow-md px-10 py-4 absolute w-full">
@@ -52,7 +54,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <img src="/image/logo.png" className="w-12" alt="" />
+        <img src="/image/logo.png" onClick={() => navigate("/")} className="cursor-pointer w-12" alt="" />
         <div className="flex items-center gap-3 text-gray-600">
           <IoPerson className="cursor-pointer" />
           <FaShoppingBag
@@ -74,7 +76,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex justify-between items-center md:hidden ">
-        <img src="/image/logo.png" className="w-12" alt="" />
+        <img src="/image/logo.png" className="w-12 cursor-pointer" onClick={() => navigate("/")} alt="" />
         <div className="flex items-center gap-x-4">
           <FaShoppingBag
             className="cursor-pointer"
