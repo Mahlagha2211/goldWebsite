@@ -8,15 +8,22 @@ import { FaMinus } from "react-icons/fa";
 
 export default function DrawerShop({ shopOpen, setShopOpen }) {
   const { cartShop, dispatch, allPriceShop } = useContext(MenuContext);
-
+const customTheme = createTheme({
+  drawer: {
+    root: {
+      base: "!bg-bgMain text-[#666666]",
+    },
+  },
+});
   return (
     <>
-      <ThemeProvider>
+      <ThemeProvider theme={customTheme}>
         <Drawer
+        
           open={shopOpen}
           onClose={() => setShopOpen(false)}
           position="right"
-          className="overflow-x-hidden px-0 transition-all duration-700 ease-in-out space-y-6 bg-bgMain text-xl text-[#666666]"
+          className="!overflow-x-hidden px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
         >
           <div className="flex justify-between px-4">
             <p>Menu</p>
@@ -61,7 +68,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
               </div>
             ))}
             {
-              <div className="fixed w-full h-16 gap-x-2 shadow shadow-black bg-[#D9B8A7] bottom-0 flex items-center px-3 ">
+              <div className="fixed text-black w-full h-16 gap-x-2 shadow shadow-black bg-[#D9B8A7] bottom-0 flex items-center px-3 ">
                 <p className="text-[18px] ">totalPrice:</p>
                 <p className="font-bold">${allPriceShop}</p>
               </div>
