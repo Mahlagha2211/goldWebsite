@@ -3,9 +3,21 @@ import { useQuery } from "@tanstack/react-query";
 import { NavLink, useParams } from "react-router";
 import { CiHeart } from "react-icons/ci";
 import { BeatLoader } from "react-spinners";
+import { useContext } from "react";
+import MenuContext from "../context/ContexMenu";
+import { toast } from "react-toastify";
 
 export default function Categorytype() {
+  const { cartShop, dispatch } = useContext(MenuContext);
   const { category } = useParams();
+  const addhandle = (dt) => {
+    const before = cartShop.find((item) => item.id == dt.id);
+    before
+      ? dispatch({ type: "increment", payload: dt })
+      : dispatch({ type: "add", payload: dt });
+
+    toast.success("add to cart successful");
+  };
   const fetchedData = async () => {
     const response = await axios.get("/data/db.json");
     return response.data.categories.find((item) => item.name == category);
@@ -52,11 +64,14 @@ export default function Categorytype() {
                     Lab-Grown Diamonds by KAY Emerald-Cut Halo Necklace 1/2 ct
                     tw 10K White Gold 18"
                   </p>
-                  <p className="text-[#B53A3A]">$1599.99</p>
+                  <p className="text-[#B53A3A]">$15.99</p>
                 </div>
               </NavLink>
             </div>
-            <div className="bg-primaryColor cursor-pointer text-center w-full py-2 text-white rounded-2xl border border-white mt-3">
+            <div
+              className="bg-primaryColor cursor-pointer text-center w-full py-2 text-white rounded-2xl border border-white mt-3"
+              onClick={() => addhandle(item)}
+            >
               add to card
             </div>
           </div>

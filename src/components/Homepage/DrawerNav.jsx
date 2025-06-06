@@ -19,7 +19,7 @@ const customTheme = createTheme({
 });
 
 export default function DrawerNav({ isOpen, setIsOpen }) {
-  const closeDrawer = () => {};
+ 
   return (
     <>
       <ThemeProvider theme={customTheme}>

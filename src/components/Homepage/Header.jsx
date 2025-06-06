@@ -13,7 +13,7 @@ export default function Header() {
           luxury jewelry collection, where every piece tells a story of
           sophistication and beauty
         </p>
-        <Link to="/product" className="bg-[#D4A373]  px-9 py-2 max-sm:text-[14px] text-white rounded-lg">
+        <Link to="/products" className="bg-[#D4A373]  px-9 py-2 max-sm:text-[14px] text-white rounded-lg">
           Buy now
         </Link>
       </div>

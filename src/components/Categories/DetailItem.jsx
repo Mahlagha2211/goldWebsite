@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BeatLoader } from "react-spinners";
+import MenuContext from "../context/ContexMenu";
+import { toast } from "react-toastify";
 
 export default function DetailItem() {
   const { category, id } = useParams();
@@ -10,6 +12,14 @@ export default function DetailItem() {
   const [selectedColor, setSelectedColor] = useState();
   const [selectedSize, setSelectedSize] = useState();
   const [selectedShape, setSelectedShape] = useState();
+  const { cartShop, dispatch } = useContext(MenuContext);
+  const addhandle = (dt) => {
+    const before = cartShop.find((item) => item.id == dt.id);
+    before
+      ? dispatch({ type: "increment", payload: dt })
+      : dispatch({ type: "add", payload: dt });
+    toast.success("add to cart successful");
+  };
 
   const fetchdetail = async () => {
     const response = await axios.get("/data/db.json");
@@ -88,8 +98,11 @@ export default function DetailItem() {
         </p>
         <p className="text-[#5A5A5A]">Ariana Grande x drop earrings</p>
         <p>Crystal pearl, Mixed cuts, White, Rhodium plated</p>
-        <p>$1599.99</p>
-        <p className="bg-primaryColor inline-block px-3 py-1 rounded-lg text-white">
+        <p>$15.99</p>
+        <p
+          onClick={() => addhandle(data)}
+          className="bg-primaryColor cursor-pointer inline-block px-3 py-1 rounded-lg text-white"
+        >
           add to cart
         </p>
         <p>

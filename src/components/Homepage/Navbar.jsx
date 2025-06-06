@@ -1,12 +1,14 @@
 import { NavLink } from "react-router";
-import { IoSearchSharp } from "react-icons/io5";
+import { FaShoppingBag } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import DrawerNav from "./DrawerNav";
+import DrawerShop from "./DrawerShop";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [shopOpen, setShopOpen] = useState(false);
   return (
     <div className="bg-bgMain shadow-md px-10 py-4 absolute w-full">
       <div className="flex justify-between w-full items-center max-md:hidden ">
@@ -21,7 +23,7 @@ export default function Navbar() {
                   } max-[992px]:text-[14px]`
                 }
               >
-               HOME
+                HOME
               </NavLink>
             </li>
             <li className="">
@@ -53,7 +55,10 @@ export default function Navbar() {
         <img src="/image/logo.png" className="w-12" alt="" />
         <div className="flex items-center gap-3 text-gray-600">
           <IoPerson className="cursor-pointer" />
-          <IoSearchSharp className="cursor-pointer" />
+          <FaShoppingBag
+            className="cursor-pointer"
+            onClick={() => setShopOpen(!shopOpen)}
+          />
           <NavLink
             to="/products"
             className={({ isActive }) =>
@@ -70,13 +75,20 @@ export default function Navbar() {
       </div>
       <div className="flex justify-between items-center md:hidden ">
         <img src="/image/logo.png" className="w-12" alt="" />
-        <IoMenu
-          size={25}
-          className="cursor-pointer"
-          onClick={() => setIsOpen(true)}
-        /> 
+        <div className="flex items-center gap-x-4">
+          <FaShoppingBag
+            className="cursor-pointer"
+            onClick={() => setShopOpen(!shopOpen)}
+          />
+          <IoMenu
+            size={25}
+            className="cursor-pointer"
+            onClick={() => setIsOpen(true)}
+          />
+        </div>
       </div>
       <DrawerNav isOpen={isOpen} setIsOpen={setIsOpen} />
+      <DrawerShop shopOpen={shopOpen} setShopOpen={setShopOpen} />
     </div>
   );
 }
