@@ -12,7 +12,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [shopOpen, setShopOpen] = useState(false);
   return (
-    <div className="bg-bgMain shadow-md px-10 py-4 absolute w-full">
+    <div className="bg-bgMain shadow-md px-10 py-4 relative w-full">
       <div className="flex justify-between w-full items-center max-md:hidden ">
         <div>
           <ul className="flex gap-x-4 text-gray-600">
@@ -30,14 +30,14 @@ export default function Navbar() {
             </li>
             <li className="">
               <NavLink
-                to="/releases"
+                to="/workflow"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-primaryColor font-bold" : "text-gray-600"
                   } max-[992px]:text-[14px]`
                 }
               >
-                NEW RELEASES
+                WORKFLOW
               </NavLink>
             </li>
             <li>

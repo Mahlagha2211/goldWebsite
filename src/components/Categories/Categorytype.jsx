@@ -34,7 +34,7 @@ export default function Categorytype() {
       </div>
     );
   return (
-    <div className=" pt-[130px] md:px-15 px-10 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5]">
+    <div className=" pt-[30px] md:px-15 px-10 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5]">
       <p className="text-center min-[580px]:text-3xl min-[400px]:text-2xl text-xl text-[#604825]">
         {data.name}
       </p>

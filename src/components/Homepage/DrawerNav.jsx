@@ -67,7 +67,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                         HOME
                       </NavLink>
                       <NavLink
-                        to="/releases"
+                        to="/workflow"
                         onClick={(e) => {
                           if (location.pathname === "/releases") {
                             e.preventDefault();
@@ -82,7 +82,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                           }`
                         }
                       >
-                        NEW RELEASES
+                        WORKFLOW
                       </NavLink>
                       <NavLink
                         to="/gifts"
