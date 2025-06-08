@@ -1,41 +1,47 @@
 export default function Main() {
   return (
-    <div className="">
-      <div className="text-white h-96 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">
-        <div className="w-50  absolute  bottom-10 left-24 space-y-3">
-          <p className="text-5xl">
+    <div>
+      <div className="text-white min-[600px]:h-96 min-[450px]:max-[600px]:h-80 h-56 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">
+        <div className="min-[400px]:w-50 w-36  absolute  rounded-2xl   min-[450px]:bottom-10 bottom-5 min-md:left-20 min-[400px]:max-md:left-10 left-5  space-y-3">
+          <p className="min-[600px]:text-5xl min-[450px]:max-[600px]:text-3xl text-[18px] ">
             CUSTOM <br />
             JEWELRY
           </p>
-          <p>Learn all about our custom jewelry design process.</p>
-          <p className="bg-primaryColor border rounded-lg inline-block px-2 py-1">
+          <p className="min-[450]:max-[600px]:text-[12px] text-[10px]">
+            Learn all about our custom jewelry design process.
+          </p>
+          <p className="bg-primaryColor border rounded-lg inline-block px-2 py-1 max-[450px]:text-[12px]">
             Get Started
           </p>
         </div>
       </div>
       <div className="bg-linear-to-b py-20 from-[#F8F8F8] to-[#DFC8A5]">
-        <div className="text-center px-50 space-y-3">
-          <p className="text-3xl text-[#604825]">CREATE YOUR DREAM JEWELRY</p>
-          <p className="text-primaryColor">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolorem
-            distinctio amet aliquam cum cumque, harum enim voluptate
-            necessitatibus non maiores iure veniam autem explicabo dolore
-            tempore iusto
+        <div className="text-center lg:px-50 min-[550px]:max-lg:px-16 min-[400px]:max-[550px]:px-10 px-5 space-y-3">
+          <p className="md:text-3xl min-[550px]:max-md:text-xl text-[18px]  text-[#604825]">
+            CREATE YOUR DREAM JEWELRY
+          </p>
+          <p className="text-primaryColor max-md:text-[12px] ">
+            why settle for purchasing a generic piece of jewelry when tou can
+            have a one-of-a-kind creation? with briliance , out team of expert
+            designers and skilled artisans can work with you to craft the
+            perfect piece of personalized jewelry .
           </p>
         </div>
         <div className="py-30 space-y-40">
-          <div className="h-80 flex ml-50 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
-            <div className="h-full w-[800px]">
+          <div className="min-[725px]:h-80 min-[550px]:max-[727px]:h-64 flex max-[550px]:flex-col min-[950px]:ml-50 ml-20 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
+            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
               <img
                 src="/image/idea.png"
                 className="h-full transform rounded-lg -translate-y-5 translate-x-5 w-full object-cover"
                 alt=""
               />
             </div>
-            <div className="">
-              <div className="px-30 py-10 space-y-4">
-                <p className="text-[#604825] text-3xl">Step 1 : Your Idea</p>
-                <p className="text-[#777677] text-justify">
+            <div>
+              <div className="min-[950px]:px-30 min-[727px]:max-[950px]:px-16 min-[550px]:max-[727px]:px-10 px-5 min-[727px]:py-10 min-[550px]:max-[727px]:py-5 pb-5 space-y-4">
+                <p className="text-[#604825] min-[727px]:text-3xl text-xl">
+                  Step 1 : Your Idea
+                </p>
+                <p className="text-[#777677] text-justify max-[727px]:text-[12px]">
                   Share your personalized jewelry, ideas, images, or sketches
                   with us to start. Our skilled artisans will refine your
                   vision, guide you, and give a quote before starting the
@@ -44,11 +50,14 @@ export default function Main() {
               </div>
             </div>
           </div>
-          <div className="h-80 flex mr-50 border-y border-r  border-white bg-linear-to-r rounded-r-lg to-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) from-[rgba(255,255,255,0.4)]]">
-            <div className="space-y-20">
-              <div className="px-30 py-10 space-y-4">
-                <p className="text-[#604825] text-3xl">Step 2 : Your Design</p>
-                <p className="text-[#777677] text-justify">
+
+          <div className="min-[725px]:h-80 min-[550px]:max-[727px]:h-64 flex max-[550px]:flex-col-reverse min-[950px]:mr-50 mr-20 border-y border-r  border-white bg-linear-to-r rounded-r-lg to-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) from-[rgba(255,255,255,0.4)]]">
+            <div>
+              <div className="min-[950px]:px-30 min-[727px]:max-[950px]:px-16 min-[550px]:max-[727px]:px-10 px-5 min-[727px]:py-10 min-[550px]:max-[727px]:py-5 pb-5 space-y-4">
+                <p className="text-[#604825] min-[727px]:text-3xl text-xl">
+                  Step 2 : Your Design
+                </p>
+                <p className="text-[#777677] text-justify max-[727px]:text-[12px]">
                   Our design experts will use cutting-edge jewelry CAD
                   technology to create detailed renderings of your beautiful
                   design from multiple angles. You can make unlimited
@@ -56,7 +65,7 @@ export default function Main() {
                 </p>
               </div>
             </div>
-            <div className="h-full w-[800px]">
+            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
               <img
                 src="/image/design.png"
                 className="h-full transform rounded-lg -translate-y-5 -translate-x-5 w-full object-cover"
@@ -64,18 +73,20 @@ export default function Main() {
               />
             </div>
           </div>
-          <div className="h-80 flex ml-50 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
-            <div className="h-full w-[800px]">
+          <div className="min-[725px]:h-80 min-[550px]:max-[727px]:h-64 flex max-[550px]:flex-col min-[950px]:ml-50 ml-20 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
+            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
               <img
                 src="/image/create.png"
                 className="h-full transform rounded-lg -translate-y-5 translate-x-5 w-full object-cover"
                 alt=""
               />
             </div>
-            <div className="space-y-20">
-              <div className="px-30 py-10 space-y-4">
-                <p className="text-[#604825] text-3xl">Step 3 : Your Jewerly</p>
-                <p className="text-[#777677] text-justify">
+            <div>
+              <div className="min-[950px]:px-30 min-[727px]:max-[950px]:px-16 min-[550px]:max-[727px]:px-10 px-5 min-[727px]:py-10 min-[550px]:max-[727px]:py-5 pb-5 space-y-4">
+                <p className="text-[#604825] min-[727px]:text-3xl text-xl">
+                  Step 3 : Your Jewelry
+                </p>
+                <p className="text-[#777677] text-justify max-[727px]:text-[12px]">
                   After you have given your final approval for the jewelry
                   design, our skilled jewelry artisans will begin crafting your
                   custom piece. Typically, custom pieces are completed and
