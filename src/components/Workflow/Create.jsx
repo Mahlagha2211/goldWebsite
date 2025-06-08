@@ -1,4 +1,4 @@
-export default function Main() {
+export default function Create() {
   return (
     <div>
       <div className="text-white min-[600px]:h-96 min-[450px]:max-[600px]:h-80 h-56 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">

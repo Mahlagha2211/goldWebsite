@@ -1,12 +1,15 @@
 import Footer from "../components/Homepage/Footer";
 import Navbar from "../components/Homepage/Navbar";
-import Main from "../components/Workflow/main";
+import Create from "../components/Workflow/Create";
+
+
+
 
 export default function Workflow() {
   return (
     <>
       <Navbar />
-      <Main />
+      <Create/>
       <Footer />
     </>
   );
