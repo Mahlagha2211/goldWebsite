@@ -29,10 +29,10 @@ export default function Create() {
         </div>
         <div className="py-30 space-y-40">
           <div className="min-[725px]:h-80 min-[550px]:max-[727px]:h-64 flex max-[550px]:flex-col min-[950px]:ml-50 ml-20 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
-            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
+            <div className="min-[550px]:h-full h-64 max-[550px]:px-5 min-[550px]:w-[800px]">
               <img
                 src="/image/idea.png"
-                className="h-full transform rounded-lg -translate-y-5 translate-x-5 w-full object-cover"
+                className="h-full transform rounded-lg -translate-y-5 min-[550px]:translate-x-5 w-full object-cover"
                 alt=""
               />
             </div>
@@ -65,19 +65,19 @@ export default function Create() {
                 </p>
               </div>
             </div>
-            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
+            <div className="min-[550px]:h-full h-64 max-[550px]:px-5 min-[550px]:w-[800px]">
               <img
                 src="/image/design.png"
-                className="h-full transform rounded-lg -translate-y-5 -translate-x-5 w-full object-cover"
+                className="h-full transform rounded-lg -translate-y-5 min-[550px]:-translate-x-5 w-full object-cover"
                 alt=""
               />
             </div>
           </div>
           <div className="min-[725px]:h-80 min-[550px]:max-[727px]:h-64 flex max-[550px]:flex-col min-[950px]:ml-50 ml-20 border-y border-l  border-white bg-linear-to-r rounded-l-lg from-[rgba(194,137,120,0.5)] via-[rgba(255,255,255,0.1) to-[rgba(255,255,255,0.4)]]">
-            <div className="min-[550px]:h-full h-64 min-[550px]:w-[800px]">
+            <div className="min-[550px]:h-full h-64 max-[550px]:px-5 min-[550px]:w-[800px]">
               <img
                 src="/image/create.png"
-                className="h-full transform rounded-lg -translate-y-5 translate-x-5 w-full object-cover"
+                className="h-full transform rounded-lg -translate-y-5 min-[550px]:translate-x-5 w-full object-cover"
                 alt=""
               />
             </div>
@@ -97,6 +97,7 @@ export default function Create() {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

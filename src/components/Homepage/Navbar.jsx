@@ -1,16 +1,17 @@
-import {  NavLink, useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { FaShoppingBag } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DrawerNav from "./DrawerNav";
 import DrawerShop from "./DrawerShop";
-
+import MenuContext from "../context/ContexMenu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [shopOpen, setShopOpen] = useState(false);
+  const { numberCart } = useContext(MenuContext);
   return (
     <div className="bg-bgMain shadow-md min-[400px]:px-10 px-5 py-4 relative w-full">
       <div className="flex justify-between w-full items-center max-md:hidden ">
@@ -54,11 +55,20 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <img src="/image/logo.png" onClick={() => navigate("/")} className="cursor-pointer w-12" alt="" />
-        <div className="flex items-center gap-3 text-gray-600">
-          <IoPerson className="cursor-pointer" />
+        <img
+          src="/image/logo.png"
+          onClick={() => navigate("/")}
+          className="cursor-pointer w-12"
+          alt=""
+        />
+        <div className="flex items-center relative gap-5 text-gray-600">
+          <IoPerson className="cursor-pointer w-6 h-6" />
+          <p className="bg-primaryColor text-white px-2 rounded-full absolute bottom-5 left-14">
+            {numberCart}
+          </p>
+
           <FaShoppingBag
-            className="cursor-pointer"
+            className="cursor-pointer w-6 h-6"
             onClick={() => setShopOpen(!shopOpen)}
           />
           <NavLink
@@ -76,10 +86,18 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex justify-between items-center md:hidden ">
-        <img src="/image/logo.png" className="w-12 cursor-pointer" onClick={() => navigate("/")} alt="" />
-        <div className="flex items-center gap-x-4">
+        <img
+          src="/image/logo.png"
+          className="w-12 cursor-pointer"
+          onClick={() => navigate("/")}
+          alt=""
+        />
+        <div className="flex items-center relative gap-x-4">
+          <p className="bg-primaryColor text-white px-2 rounded-full absolute bottom-3 left-3">
+            {numberCart}
+          </p>
           <FaShoppingBag
-            className="cursor-pointer"
+            className="cursor-pointer w-6 h-6"
             onClick={() => setShopOpen(!shopOpen)}
           />
           <IoMenu
