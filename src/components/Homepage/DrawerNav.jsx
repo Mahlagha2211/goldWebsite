@@ -100,7 +100,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                           }`
                         }
                       >
-                        GIFTS
+                        FAVORITES
                       </NavLink>
                       <NavLink
                         to="/products"

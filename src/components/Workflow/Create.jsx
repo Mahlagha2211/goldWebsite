@@ -1,4 +1,11 @@
+import FormCustome from "./FormCustome";
+import React, { useState } from "react";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
+
 export default function Create() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <div className="text-white min-[600px]:h-96 min-[450px]:max-[600px]:h-80 h-56 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">
@@ -10,7 +17,10 @@ export default function Create() {
           <p className="min-[450]:max-[600px]:text-[12px] text-[10px]">
             Learn all about our custom jewelry design process.
           </p>
-          <p className="bg-primaryColor border rounded-lg inline-block px-2 py-1 max-[450px]:text-[12px]">
+          <p
+            onClick={() => setIsOpen(true)}
+            className="bg-primaryColor cursor-pointer border rounded-lg inline-block px-2 py-1 max-[450px]:text-[12px]"
+          >
             Get Started
           </p>
         </div>
@@ -47,6 +57,12 @@ export default function Create() {
                   vision, guide you, and give a quote before starting the
                   creation process.
                 </p>
+                <p
+                  className="bg-primaryColor cursor-pointer border rounded-lg inline-block px-5 py-1 max-[727px]:text-[12px] text-white"
+                  onClick={() => setIsOpen(true)}
+                >
+                  Order
+                </p>
               </div>
             </div>
           </div>
@@ -62,6 +78,12 @@ export default function Create() {
                   technology to create detailed renderings of your beautiful
                   design from multiple angles. You can make unlimited
                   adjustments until you are happy with the final design.
+                </p>
+                <p
+                  className="bg-primaryColor cursor-pointer border rounded-lg inline-block px-5 py-1 max-[727px]:text-[12px] text-white"
+                  onClick={() => setIsOpen(true)}
+                >
+                  Order
                 </p>
               </div>
             </div>
@@ -93,12 +115,26 @@ export default function Create() {
                   delivered within 3 to 6 weeks, depending on the intricacy of
                   the design.
                 </p>
+                <p
+                  className="bg-primaryColor cursor-pointer border rounded-lg inline-block px-5 py-1 max-[727px]:text-[12px] text-white"
+                  onClick={() => setIsOpen(true)}
+                >
+                  Order
+                </p>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        contentLabel="Custom Modal"
+        className="bg-[#e0c4ba] shadow-[0_0_10px_black]  rounded-xl  min-sm:max-w-md w-[80%] mx-auto  outline-none z-50"
+        overlayClassName="fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-md z-40"
+      >
+        <FormCustome setIsOpen={setIsOpen} />
+      </Modal>
     </div>
   );
 }

@@ -50,7 +50,7 @@ export default function Navbar() {
                   } max-[992px]:text-[14px]`
                 }
               >
-                GIFTS
+                FAVORITES
               </NavLink>
             </li>
           </ul>
@@ -61,9 +61,9 @@ export default function Navbar() {
           className="cursor-pointer w-12"
           alt=""
         />
-        <div className="flex items-center relative gap-5 text-gray-600">
+        <div className="flex items-center relative gap-7 text-gray-600">
           <IoPerson className="cursor-pointer w-6 h-6" />
-          <p className="bg-primaryColor text-white px-2 rounded-full absolute bottom-5 left-14">
+          <p className="bg-primaryColor text-white px-2 rounded-full absolute bottom-5 left-16">
             {numberCart}
           </p>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
           onClick={() => navigate("/")}
           alt=""
         />
-        <div className="flex items-center relative gap-x-4">
+        <div className="flex items-center relative gap-x-7">
           <p className="bg-primaryColor text-white px-2 rounded-full absolute bottom-3 left-3">
             {numberCart}
           </p>

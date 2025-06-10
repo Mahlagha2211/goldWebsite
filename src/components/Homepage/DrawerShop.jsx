@@ -21,7 +21,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
           open={shopOpen}
           onClose={() => setShopOpen(false)}
           position="right"
-          className="!overflow-x-hidden px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
+          className="!overflow-x-hidden  px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
         >
           <div className="flex justify-between px-4">
             <p>Menu</p>
@@ -67,9 +67,12 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
             ))}
           </div>
 
-          <div className="fixed bottom-0  w-full h-16 z-50 bg-[#D9B8A7] shadow shadow-black  flex items-center px-3 gap-x-2 text-black">
-            <p className="text-[18px] ">totalPrice:</p>
-            <p className="font-bold">${allPriceShop} </p>
+          <div className="fixed bottom-0 w-[320px]   space-y-2 py-2 z-50 bg-[#D9B8A7] shadow shadow-black   px-3  text-black">
+            <div className="flex w-full justify-between">
+              <p className="text-[18px] ">totalPrice:</p>
+              <p className="font-bold">${allPriceShop} </p>
+            </div>
+            <div className="text-center bg-bgMain py-1 rounded-lg shadow-[0_0_1px_black]">CheckOut</div>
           </div>
         </Drawer>
       </ThemeProvider>
