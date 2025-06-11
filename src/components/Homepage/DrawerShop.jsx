@@ -21,7 +21,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
           open={shopOpen}
           onClose={() => setShopOpen(false)}
           position="right"
-          className="!overflow-x-hidden  px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
+          className="!overflow-x-hidden h-screen px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
         >
           <div className="flex justify-between px-4">
             <p>Menu</p>
@@ -32,9 +32,9 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
             />
           </div>
           <hr />
-          <div className="space-y-5 relative">
+          <div className="space-y-5 overflow-y-auto h-[calc(100vh-200px)] relative ">
             {cartShop.map((item) => (
-              <div key={item.id} className="flex px-3 items-center gap-x-1  ">
+              <div key={item.id} className="flex px-3 items-center gap-x-1   ">
                 <IoMdClose
                   onClick={() => dispatch({ type: "delete", payload: item })}
                   className="cursor-pointer text-[15px]"
@@ -72,7 +72,9 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
               <p className="text-[18px] ">totalPrice:</p>
               <p className="font-bold">${allPriceShop} </p>
             </div>
-            <div className="text-center bg-bgMain py-1 rounded-lg shadow-[0_0_1px_black]">CheckOut</div>
+            <div className="text-center bg-bgMain py-1 my-2 rounded-lg shadow-[0_0_1px_black]">
+              CheckOut
+            </div>
           </div>
         </Drawer>
       </ThemeProvider>

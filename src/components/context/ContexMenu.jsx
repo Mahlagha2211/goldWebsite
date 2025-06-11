@@ -39,14 +39,24 @@ const cartAbility = (state, { type, payload }) => {
       return state.filter((item) => item.id != payload.id);
   }
 };
+const favoriteAbility = (state, { type, payload }) => {
+  switch (type) {
+    case "add":
+      return [...state, payload];
+    case "delete":
+      return state.filter((item) => item.id != payload.id);
+  }
+};
 export function ContextMenu({ children }) {
   const [cartShop, dispatch] = useReducer(cartAbility, []);
-  const [allPriceShop, setAllPriceShop] = useState(0.00);
+  const [favorite, dispatchFavorite] = useReducer(favoriteAbility, []);
+  const [allPriceShop, setAllPriceShop] = useState(0.0);
   const [numberCart, setNumberShop] = useState(0);
+
   useEffect(() => {
     if (!cartShop || cartShop.length === 0) {
       setAllPriceShop("0.00");
-      setNumberShop(0)
+      setNumberShop(0);
       return;
     }
 
@@ -64,7 +74,14 @@ export function ContextMenu({ children }) {
 
   return (
     <MenuContext.Provider
-      value={{ cartShop, dispatch, allPriceShop, numberCart }}
+      value={{
+        cartShop,
+        dispatch,
+        allPriceShop,
+        numberCart,
+        favorite,
+        dispatchFavorite,
+      }}
     >
       {children}
     </MenuContext.Provider>

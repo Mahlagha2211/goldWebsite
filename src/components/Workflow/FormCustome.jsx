@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { IoMdClose } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const schema = Yup.object({
   name: Yup.string()
@@ -17,7 +18,7 @@ const schema = Yup.object({
   color: Yup.string().required("Please select a color"),
 });
 
-export default function FormCustome({setIsOpen}) {
+export default function FormCustome({ setIsOpen }) {
   return (
     <Formik
       initialValues={{
@@ -30,8 +31,9 @@ export default function FormCustome({setIsOpen}) {
       }}
       validationSchema={schema}
       onSubmit={(values, actions) => {
-        console.log(values);
         actions.resetForm();
+        setIsOpen(false);
+        toast.success("order placed");
       }}
       validateOnChange={false}
       validateOnBlur={false}
@@ -39,10 +41,8 @@ export default function FormCustome({setIsOpen}) {
       {({ isSubmitting }) => (
         <Form className="min-[550px]:p-10 p-5    mx-auto rounded-lg max-w-lg space-y-4">
           <div className="flex items-center gap-x-3">
-          
             <IoMdClose
               className="cursor-pointer  "
-              
               onClick={() => setIsOpen(false)}
             />
             <p className="text-2xlk max-[550px]:text-[20px] max-[400px]:font-bold max-[400px]:text-[15px]">
@@ -165,10 +165,9 @@ export default function FormCustome({setIsOpen}) {
           {/* SUBMIT */}
           <button
             type="submit"
-            disabled={isSubmitting}
-            className="w-full rounded-lg bg-primary-600 py-1 text-white shadow-md transition hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full rounded-lg bg-primary-600 py-1 text-white shadow-md transition hover:bg-primary-700 "
           >
-            {isSubmitting ? "Ordering…" : "Order"}
+            Order
           </button>
         </Form>
       )}

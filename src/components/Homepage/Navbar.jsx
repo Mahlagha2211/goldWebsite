@@ -13,7 +13,7 @@ export default function Navbar() {
   const [shopOpen, setShopOpen] = useState(false);
   const { numberCart } = useContext(MenuContext);
   return (
-    <div className="bg-bgMain shadow-md min-[400px]:px-10 px-5 py-4 relative w-full">
+    <div className="bg-bgMain shadow-md min-[400px]:px-10 px-5 py-4 w-full ">
       <div className="flex justify-between w-full items-center max-md:hidden ">
         <div>
           <ul className="flex gap-x-4 text-gray-600">
@@ -43,7 +43,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/gifts "
+                to="/favorites "
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-primaryColor font-bold" : "text-gray-600"

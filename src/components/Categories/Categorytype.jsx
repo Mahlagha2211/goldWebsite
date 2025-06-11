@@ -8,7 +8,8 @@ import MenuContext from "../context/ContexMenu";
 import { toast } from "react-toastify";
 
 export default function Categorytype() {
-  const { cartShop, dispatch } = useContext(MenuContext);
+  const { cartShop, dispatch, favorite, dispatchFavorite } =
+    useContext(MenuContext);
   const { category } = useParams();
   const addhandle = (dt) => {
     const before = cartShop.find((item) => item.id == dt.id);
@@ -17,6 +18,16 @@ export default function Categorytype() {
       : dispatch({ type: "add", payload: dt });
 
     toast.success("add to cart successful");
+  };
+  const handelFavorite = (dt) => {
+    const beforeFavorite = favorite.find((item) => item.id == dt.id);
+
+    if (beforeFavorite) {
+      toast.warning("Already added to favorites");
+    } else {
+      dispatchFavorite({ type: "add", payload: dt });
+      toast.success("Added to favorites successfully!");
+    }
   };
   const fetchedData = async () => {
     const response = await axios.get("/data/db.json");
@@ -51,7 +62,14 @@ export default function Categorytype() {
                 to={`/products/${category}/${item.id}`}
                 className="bg-white relative w-full h-full rounded-2xl overflow-hidden flex flex-col"
               >
-                <CiHeart className="absolute right-3 top-3 text-[#C28978] w-7 h-7 hover:text-red-600" />
+                <CiHeart
+                  onClick={(e) => {
+                    e.preventDefault(); // جلوگیری از رفتن به لینک
+                    e.stopPropagation(); // جلوگیری از bubble شدن event به NavLink
+                    handelFavorite(item);
+                  }}
+                  className="absolute right-3 top-3 text-[#C28978] w-7 h-7 hover:text-red-600"
+                />
                 <img
                   src={item.image}
                   className="w-full min-[1100px]:h-72 min-[580px]:h-52 h-40"

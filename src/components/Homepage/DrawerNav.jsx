@@ -19,7 +19,6 @@ const customTheme = createTheme({
 });
 
 export default function DrawerNav({ isOpen, setIsOpen }) {
- 
   return (
     <>
       <ThemeProvider theme={customTheme}>
@@ -85,7 +84,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                         WORKFLOW
                       </NavLink>
                       <NavLink
-                        to="/gifts"
+                        to="/favorites"
                         onClick={(e) => {
                           if (location.pathname === "/gifts") {
                             e.preventDefault();

@@ -9,6 +9,7 @@ import { ContextMenu } from "./components/context/ContexMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Workflow from "./pages/Workflow";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path=":category/:id" element={<DetailItem />} />
         </Route>
         <Route path="/workflow" element={<Workflow />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <ToastContainer autoClose={2000} />
     </ContextMenu>
