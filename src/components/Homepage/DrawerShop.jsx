@@ -14,12 +14,16 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
       },
     },
   });
+  const hanelClose=()=>{
+    document.body.style.overflow = 'auto'
+    setShopOpen(false)
+  }
   return (
     <>
       <ThemeProvider theme={customTheme}>
         <Drawer
           open={shopOpen}
-          onClose={() => setShopOpen(false)}
+          onClose={() => hanelClose()}
           position="right"
           className="!overflow-x-hidden h-screen px-0 transition-all duration-700 ease-in-out space-y-6  text-xl "
         >
@@ -28,7 +32,7 @@ export default function DrawerShop({ shopOpen, setShopOpen }) {
             <IoMdClose
               className="cursor-pointer "
               size={25}
-              onClick={() => setShopOpen(false)}
+              onClick={() => hanelClose()}
             />
           </div>
           <hr />

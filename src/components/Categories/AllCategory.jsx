@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 export default function AllCategory() {
   return (
-    <div className=" flex flex-col items-center justify-center gap-y-7 pb-16 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5] pt-[30px]">
+    <div className=" flex flex-col items-center justify-center gap-y-7 pb-16 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5] pt-[130px]">
       <p className="text-center min-[580px]:text-3xl min-[400px]:text-2xl text-xl text-[#604825]">All Categories</p>
       <p className="text-center text-primaryColor  min-[400px]:text-[13px] text-[12px]">
         Find your new everyday favorite with our collection men and women

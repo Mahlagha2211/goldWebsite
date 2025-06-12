@@ -12,8 +12,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [shopOpen, setShopOpen] = useState(false);
   const { numberCart } = useContext(MenuContext);
+  const handelOpen = () => {
+    document.body.style.overflow = 'hidden'
+    setShopOpen(!shopOpen);
+  };
   return (
-    <div className="bg-bgMain shadow-md min-[400px]:px-10 px-5 py-4 w-full ">
+    <div className="bg-bgMain shadow-md min-[400px]:px-10 px-5 py-4 w-full fixed z-[1000]">
       <div className="flex justify-between w-full items-center max-md:hidden ">
         <div>
           <ul className="flex gap-x-4 text-gray-600">
@@ -69,7 +73,7 @@ export default function Navbar() {
 
           <FaShoppingBag
             className="cursor-pointer w-6 h-6"
-            onClick={() => setShopOpen(!shopOpen)}
+            onClick={() => handelOpen()}
           />
           <NavLink
             to="/products"
@@ -98,7 +102,7 @@ export default function Navbar() {
           </p>
           <FaShoppingBag
             className="cursor-pointer w-6 h-6"
-            onClick={() => setShopOpen(!shopOpen)}
+            onClick={() => handelOpen()}
           />
           <IoMenu
             size={25}

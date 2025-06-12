@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { NavLink, useParams } from "react-router";
-import { CiHeart } from "react-icons/ci";
+
 import { BeatLoader } from "react-spinners";
 import { useContext } from "react";
 import MenuContext from "../context/ContexMenu";
 import { toast } from "react-toastify";
+import { IoIosHeart } from "react-icons/io";
 
 export default function Categorytype() {
   const { cartShop, dispatch, favorite, dispatchFavorite } =
@@ -25,7 +26,8 @@ export default function Categorytype() {
     if (beforeFavorite) {
       toast.warning("Already added to favorites");
     } else {
-      dispatchFavorite({ type: "add", payload: dt });
+      const newFavorite = { ...dt, category: category };
+      dispatchFavorite({ type: "add", payload: newFavorite });
       toast.success("Added to favorites successfully!");
     }
   };
@@ -45,7 +47,7 @@ export default function Categorytype() {
       </div>
     );
   return (
-    <div className=" pt-[30px] md:px-15 px-10 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5]">
+    <div className=" pt-[130px] md:px-15 px-10 bg-linear-to-b from-[#F8F8F8] to-[#DFC8A5]">
       <p className="text-center min-[580px]:text-3xl min-[400px]:text-2xl text-xl text-[#604825]">
         {data.name}
       </p>
@@ -62,14 +64,19 @@ export default function Categorytype() {
                 to={`/products/${category}/${item.id}`}
                 className="bg-white relative w-full h-full rounded-2xl overflow-hidden flex flex-col"
               >
-                <CiHeart
+                <IoIosHeart
                   onClick={(e) => {
-                    e.preventDefault(); // جلوگیری از رفتن به لینک
-                    e.stopPropagation(); // جلوگیری از bubble شدن event به NavLink
+                    e.preventDefault();
+                    e.stopPropagation();
                     handelFavorite(item);
                   }}
-                  className="absolute right-3 top-3 text-[#C28978] w-7 h-7 hover:text-red-600"
+                  className={`absolute right-3 top-3  w-6 h-6  ${
+                    favorite.find((favItem) => favItem.id === item.id)
+                      ? "text-red-600"
+                      : "text-[#d18989]"
+                  }`}
                 />
+
                 <img
                   src={item.image}
                   className="w-full min-[1100px]:h-72 min-[580px]:h-52 h-40"

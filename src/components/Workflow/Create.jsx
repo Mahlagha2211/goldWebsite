@@ -7,8 +7,8 @@ Modal.setAppElement("#root");
 export default function Create() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <div className="text-white min-[600px]:h-96 min-[450px]:max-[600px]:h-80 h-56 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">
+    <div className="pt-[90px]">
+      <div className="text-white  min-[600px]:h-96 min-[450px]:max-[600px]:h-80 h-56 relative bg-[url(/image/workflow.png)]  bg-center bg-cover">
         <div className="min-[400px]:w-50 w-36  absolute  rounded-2xl   min-[450px]:bottom-10 bottom-5 min-md:left-20 min-[400px]:max-md:left-10 left-5  space-y-3">
           <p className="min-[600px]:text-5xl min-[450px]:max-[600px]:text-3xl text-[18px] ">
             CUSTOM <br />
@@ -131,7 +131,7 @@ export default function Create() {
         onRequestClose={() => setIsOpen(false)}
         contentLabel="Custom Modal"
         className="bg-[#e0c4ba] shadow-[0_0_10px_black]  rounded-xl  min-sm:max-w-md w-[80%] mx-auto  outline-none z-50"
-        overlayClassName="fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-md z-40"
+        overlayClassName="fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-md z-[1500]"
       >
         <FormCustome setIsOpen={setIsOpen} />
       </Modal>

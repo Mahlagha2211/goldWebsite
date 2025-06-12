@@ -42,6 +42,7 @@ const cartAbility = (state, { type, payload }) => {
 const favoriteAbility = (state, { type, payload }) => {
   switch (type) {
     case "add":
+      
       return [...state, payload];
     case "delete":
       return state.filter((item) => item.id != payload.id);

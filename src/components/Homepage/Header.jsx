@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <div className="bg-[#E4D1B3] md:h-[430px] flex flex-col-reverse  md:grid md:grid-cols-2 md:items-end p-12 text-[#885c30] gap-y-10">
+    <div className="bg-[#E4D1B3] md:h-[500px] flex flex-col-reverse  md:grid md:grid-cols-2 md:items-end p-12 text-[#885c30] gap-y-10 md:pt-[100px] pt-[140px] ">
       <div className="flex flex-col items-baseline gap-y-3 ">
         <p className="max-sm:text-[13px]">Discover the Brilliance of Luctury Jewellry</p>
         <p className="md:text-4xl min-[1040px]:!text-5xl sm:text-2xl text-xl">
