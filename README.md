@@ -10,6 +10,45 @@ An elegant and responsive **e-commerce platform** built with **React** and **Tai
 
 ---
 
+## 📸 Screenshots
+
+Here are some key pages of the application:
+
+### 🏠 Home Page  
+Landing page of the website.
+
+![Home Page](./screenshot/home.png)
+
+---
+
+### 🛍 Product Page  
+Displays all product categories using nested routes and `<Outlet />`.
+
+![Product Page](./screenshot/product.png)
+
+---
+
+### 📂 Category Page  
+Dynamic route example: `/products/necklaces`  
+Displays all items in the selected category.
+
+![Category Page](./screenshot/category.png)
+
+---
+
+### 🔍 Product Detail Page  
+Nested route: `/products/necklaces/:id`  
+Shows individual product info and favorite button.
+
+![Item Page](./screenshot/id.png)
+
+---
+
+### 🔧 Workflow Page  
+Describes the custom ordering process with modal and formik form.
+
+![Workflow Page](./screenshot/workflow.png)
+
 ## 🎯 Project Goals
 
 This project was created to:
