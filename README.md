@@ -22,7 +22,7 @@ A fully responsive and functional e-commerce website built with **React** and **
 
 - Built with **React Router v6**, using nested routes and `<Outlet />`
 - Dynamic product category routes:/products/{category}
-Example:  
+- Example:  
 `/products/necklaces` or `/products/rings`
 - Clicking on a product redirects to its detail page using its `id`
 
@@ -73,4 +73,3 @@ git clone https://github.com/Mahlagha2211/goldWebsite.git
 cd goldWebsite
 npm install
 npm run dev
-- پ
