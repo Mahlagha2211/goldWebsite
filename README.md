@@ -36,8 +36,8 @@ This project was created to:
 - Built using **React Router v6**
 - Nested routing and `<Outlet />` for category-based layouts
 - Dynamic routes:
- /products/:category
- /products/:category/:id
+- /products/:category
+- /products/:category/:id
 ### 📦 Product Details
 
 - Local JSON file used as the product database
