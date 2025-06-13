@@ -17,14 +17,14 @@ Here are some key pages of the application:
 ### 🏠 Home Page  
 Landing page of the website.
 
-![Home Page](./screenshot/home.png)
+![Home Page](/screenshot/home.png)
 
 ---
 
 ### 🛍 Product Page  
 Displays all product categories using nested routes and `<Outlet />`.
 
-![Product Page](./screenshot/product.png)
+![Product Page](/screenshot/product.png)
 
 ---
 
@@ -32,7 +32,7 @@ Displays all product categories using nested routes and `<Outlet />`.
 Dynamic route example: `/products/necklaces`  
 Displays all items in the selected category.
 
-![Category Page](./screenshot/category.png)
+![Category Page](/screenshot/category.png)
 
 ---
 
@@ -40,14 +40,14 @@ Displays all items in the selected category.
 Nested route: `/products/necklaces/:id`  
 Shows individual product info and favorite button.
 
-![Item Page](./screenshot/id.png)
+![Item Page](/screenshot/id.png)
 
 ---
 
 ### 🔧 Workflow Page  
 Describes the custom ordering process with modal and formik form.
 
-![Workflow Page](./screenshot/workflow.png)
+![Workflow Page](/screenshot/workflow.png)
 
 ## 🎯 Project Goals
 
